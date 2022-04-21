@@ -1,7 +1,11 @@
 import React from 'react'
 import './Signup.css'
 
+import video3 from '../../assets/video3.mp4'
+import video4 from '../../assets/video4.mp4'
+import video5 from '../../assets/video5.mp4'
 import video6 from '../../assets/video6.mp4'
+import logo1 from '../../assets/logo1.png'
 
 function Signup() {
     return (
