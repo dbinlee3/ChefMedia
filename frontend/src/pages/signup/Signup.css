@@ -84,11 +84,17 @@ video {
     font-size: 15px;
     color: #1775ee;
     text-align: center;
+    font-weight: bold;
+    transition: 250ms ease-in-out
+}
+
+.alreadyUser:hover{
+    color: darkblue
 }
 
 .signupButton{
     font-family: Trebuchet MS, sans-serif;
-    width: 60%;
+    width: 50%;
     height: 50px;
     align-self: center;
     border-radius: 10px;
@@ -98,4 +104,11 @@ video {
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+
+.signupButton:hover {
+    background-color: white;
+    color: #42b72a;
+    border: 1px solid #42b72a;
 }
