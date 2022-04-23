@@ -7,6 +7,8 @@ function Home() {
     return (
         <>
             <Post />
+            <Post />
+            <Post />
         </>
     )
 }
