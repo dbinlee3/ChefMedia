@@ -28,8 +28,8 @@ function Signup() {
                             <div className="signupBox">
                                 <input placeHolder="Email" className="signupInput"/>
                                 <input placeHolder="Username" className="signupInput"/>
-                                <input placeHolder="Password" className="signupInput"/>
-                                <input placeHolder="Retype Password" className="signupInput"/>
+                                <input type="password" name="password" placeHolder="Password" className="signupInput"/>
+                                <input type="password" name="password" placeHolder="Retype Password" className="signupInput"/>
                                 <a className="alreadyUser" href="./login">Already a user? Login!</a>
                                 <button className="signupButton">Sign up</button>
                             </div> {/* end signupBox */}
