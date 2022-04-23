@@ -1,3 +1,5 @@
+import React from 'react'
+
 //Imported Pages
 import Login from './pages/login/Login.js'
 import Signup from './pages/signup/Signup.js'
