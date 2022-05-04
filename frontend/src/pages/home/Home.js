@@ -6,9 +6,11 @@ import Post from '../../components/post/Post.js'
 function Home() {
     return (
         <>
+            
             <Post />
             <Post />
             <Post />
+            
         </>
     )
 }
