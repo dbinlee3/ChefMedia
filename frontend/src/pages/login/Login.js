@@ -1,11 +1,15 @@
 import React from 'react'
+import myVideo from '../../assets/video4.mp4'
 
-function LoginPage() {
+import './login.css'
+import { Link } from 'react-router-dom';
+
+
+function Login() {
     return (
-        <div>
-            I am the Login Page
-        </div>
+        <>
+        </>
     )
 }
 
-export default LoginPage
+export default Login

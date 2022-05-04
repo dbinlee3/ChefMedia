@@ -1,4 +1,5 @@
 import React from 'react'
+
 import './Navbar.css'
 import { MenuItems } from "./MenuItems"
 
@@ -37,7 +38,5 @@ class Navbar extends React.Component {
             
         )
     }
-    
 }
-
 export default Navbar
