@@ -1,4 +1,5 @@
 import React from 'react'
+
 import video1 from '../../assets/video3.mp4'
 
 import './login.css'
@@ -35,6 +36,7 @@ function Login() {
   
    </>
   )
+
 }
 
 export default Login
