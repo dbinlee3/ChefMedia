@@ -48,3 +48,16 @@ position: fixed;
 
   
 }
+
+.notUser{
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 15px;
+    color: #1775ee;
+    text-align: center;
+    font-weight: bold;
+    transition: 250ms ease-in-out
+}
+
+.notUser:hover{
+    color: darkblue
+}

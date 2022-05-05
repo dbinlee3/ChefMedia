@@ -23,6 +23,8 @@ function Login() {
         <input type="text" />
       </div>
 
+      <a className="notUser" href="./signup">Not a user? Register!</a>
+
       <button className="loginButton" type="button">
         LOGIN
       </button>
