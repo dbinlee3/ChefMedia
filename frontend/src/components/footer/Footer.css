@@ -1,69 +1,39 @@
 .footer {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
-  }
-
-  ul {
-    list-style-position: inside;
-    padding-left: 0;
+    margin-top: 20px;
+    margin-bottom: 15px;
   }
   
+  a {
+    text-decoration: none;
+  }
+
   .footer-separator {
-    flex-grow: 1;
     border: none;
-    height: 10px;
     background-color: black;
+    height: 10px;
     width: 100%;
   }
 
   .footer-title {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    text-decoration: underline;
-    font-weight: bold;
     font-size: 30px;
-  }
-  
-  .footer-info  {
-    display: flex;
+    font-family: American Typewriter, serif;
     justify-content: center;
+    margin-top: 10px;
+    text-decoration: underline;
   }
   
-  .left, .center, .right {
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    width: 30%;
-  }
-  
-  .contributors {
-      font-size: 23px;
-  }
-
-  .linkedin {
-    font-size: 23px;
-  }
-
-  .ourstory {
-    font-size: 23px;
-  }
-
   .center {
-      text-align: center;
-  }
-
-  .right {
-      text-align: end;
-      color: green;
-
-  }
-  
-  .name {
+    font-size: 20px;
     margin-bottom: 10px;
-    text-align: start;
+    text-align: center;
+  }
+
+  .githublogo {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
   }
