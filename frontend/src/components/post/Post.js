@@ -5,6 +5,7 @@ import gordon from '../../assets/gordon.png'
 import dotsIcon from '../../assets/dotsicon.png'
 import likeIcon from '../../assets/like.png'
 import row from '../../assets/row.jpeg'
+import sauce from '../../assets/sauce.jpeg'
 
 function Post() {
     return (
@@ -16,7 +17,7 @@ function Post() {
                     <div className="postTopLeft">
                         <img className="postProfileImg" src={gordon} alt=""/>
                         <span className="postUsername">Gordon Ramsay</span>
-                        <span className="postDate">5 mins ago</span>
+                        <span className="postDate">2 mins ago</span>
                     </div>
 
                     <div className="postTopRight">
@@ -26,8 +27,9 @@ function Post() {
                 </div>
 
                 <div className="postCenter">
-                    <span className="postText">its row</span>
+                    <span className="postText">its RAWWWWWWWWWWWWWWWWWWWWWWW WhErE's tHe lAmB SssAuUuCCCEEEEEEEEEEEEEEEEEEEEE</span>
                     <img className="postImg" src={row} alt=""/>
+                    <img className="postImg" src={sauce} alt=""/>
                 </div>
 
                 <div className="postBottom">

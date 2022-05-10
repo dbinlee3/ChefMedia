@@ -4,7 +4,6 @@ import './profile.css'
 import gordon from '../../assets/gordon.png'
 import Post from '../../components/post/Post.js'
 
-
 function Profile() {
     return (
         <div className = "profileContainer">
