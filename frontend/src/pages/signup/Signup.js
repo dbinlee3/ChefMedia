@@ -1,13 +1,45 @@
 import React from 'react'
-import './Signup.css'
+import { useRef } from 'react'
+import { useNavigate } from "react-router-dom"
+import axios from "axios"
 
-import video3 from '../../assets/video3.mp4'
-import video4 from '../../assets/video4.mp4'
-import video5 from '../../assets/video5.mp4'
+import './Signup.css'
 import video6 from '../../assets/video6.mp4'
-import logo1 from '../../assets/logo1.png'
 
 function Signup() {
+
+    const email = useRef();
+    const username = useRef();
+    const password = useRef();
+    const retypePassword = useRef();
+    const navigate = useNavigate();
+
+    const handleClick = async (e) => {
+        e.preventDefault();
+
+        if (retypePassword.current.value !== password.current.value){
+            retypePassword.current.setCustomValidity("Passwords don't match!");
+        }
+        else {
+            const user = {
+                email: email.current.value,
+                username: username.current.value,
+                password: password.current.value,
+            };
+            try {
+                console.log("Hello");
+                await axios.post("/auth/register", user);
+                navigate("/login");
+            }
+            catch(err) {
+                console.log(err)
+            }
+            
+        }
+    }
+
+
+
     return (
         <>
             <div className="signupContainer">
@@ -25,14 +57,47 @@ function Signup() {
                         </div> {/* end signupLeft */}
 
                         <div className="signupRight">
-                            <div className="signupBox">
-                                <input placeHolder="Email" className="signupInput"/>
-                                <input placeHolder="Username" className="signupInput"/>
-                                <input type="password" name="password" placeHolder="Password" className="signupInput"/>
-                                <input type="password" name="password" placeHolder="Retype Password" className="signupInput"/>
+                            <form className="signupBox" onSubmit={handleClick}>
+
+                                {/* Email Input */}
+                                <input 
+                                    type="email"
+                                    placeHolder="Email" 
+                                    required 
+                                    ref={email} 
+                                    className="signupInput"
+                                />
+                                
+                                {/* Username Input */}
+                                <input 
+                                    placeHolder="Username" 
+                                    required 
+                                    ref={username} 
+                                    className="signupInput"
+                                />
+
+                                {/* Password Input */}
+                                <input 
+                                    placeHolder="Password" 
+                                    required
+                                    ref={password} 
+                                    className="signupInput"
+                                    type="password" 
+                                    minLength="6"
+                                />
+
+                                {/* Retype Password Input */}
+                                <input 
+                                    placeHolder="Retype Password" 
+                                    required
+                                    ref={retypePassword} 
+                                    className="signupInput"
+                                    type="password" 
+                                />
+
                                 <a className="alreadyUser" href="./login">Already a user? Login!</a>
-                                <button className="signupButton">Sign up</button>
-                            </div> {/* end signupBox */}
+                                <button className="signupButton" type="submit">Sign up</button>
+                            </form> {/* end signupBox */}
                         </div> {/* end signupRight */}
 
                     </div> {/* end signupWrapper */}
