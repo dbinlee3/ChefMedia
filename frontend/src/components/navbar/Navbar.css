@@ -1,22 +1,32 @@
-.NavbarItems {
-    background: linear-gradient(90deg, rgb(110, 94, 254) 0%, rgba(73, 63, 252, 1) 100%);
-    height: 80px;
+.navbarItems {
+    background: rgb(8, 184, 149);
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
+    padding: 20px;
 }
 
-.navbar-logo {
-    color: #fff;
-    justify-self: start;
-    margin-left: 20px;
+.profPic{
+    border-radius: 50%;
+    max-height: 50px;
+    max-width: 50px;
+}
+
+.navbarLogo {
+    color: rgb(15, 34, 30);
+    /* justify-self: start; */
+    text-align: center;
+    margin-left: 25px;
     cursor: pointer;
-}
+    width: 275px;
+    text-decoration: none;
+    font-size: 27px;
+    font-weight: bold;
 
-.fa-react {
-    margin-left: 0.5rem;
-    font-size: 1.6rem;
+    position: absolute; /*to make ChefMedia in center of page */
+    
 }
 
 .nav-menu {
@@ -27,23 +37,34 @@
     text-align: center;
     width: 70vw;
     justify-content: end;
-    margin-right: 2rem;
+    margin-right: -11rem; /*to move menu move to the right */
+}
+
+.routerLink {
+    text-decoration: none;
 }
 
 .nav-links {
-    color: white;
+    color: rgb(11, 21, 19);
     text-decoration: none;
     padding: 0.5rem 1rem;
+    transition-property: all;
+    transition-duration: 400ms;
 }
 
 .nav-links:hover {
-    background-color: #6d76f7;
+    background-color: rgb(50, 198, 50);
     border-radius: 4px;
     transition: all 0.2s ease-out;
 }
 
 .fa-bars {
-    color: #fff;
+    color: white;
+}
+
+.fa-times {
+    color: white;
+    font-size: 2rem;
 }
 
 .nav-links-mobile {
@@ -54,9 +75,21 @@
     display: none;
 }
 
+.navButtons {
+    display: inline-block;
+    padding: 5px;
+}
+
 @media screen and (max-width: 960px) {
     .NavbarItems {
         position: relative;
+    }
+
+    .profPic{
+        border-radius: 50%;
+        max-height: 50px;
+        max-width: 50px;
+        margin-left: -400px;
     }
 
     .nav-menu {
@@ -65,14 +98,14 @@
         width: 100%;
         height: 500px;
         position: absolute;
-        top: 80px;
+        top: 60px;
         left: -100%;
         opacity: 1;
         transition: all 0.5s ease;
     }
 
     .nav-menu.active {
-        background: #6668f4;
+        background: green;
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
@@ -87,9 +120,8 @@
     }
 
     .nav-links:hover {
-        background-color: #7577fa;
+        background-color: rgb(50, 198, 50);
         border-radius: 0;
-
     }
 
     .navbar-logo {
@@ -109,32 +141,39 @@
         cursor: pointer;
     }
 
-    .fa-times {
-        color: #fff;
-        font-size: 2rem;
-    }
-
     .nav-links-mobile {
         display: block;
         text-align: center;
         padding: 1.5rem;
-        margin: 2rem auto;
+        margin: 0.5rem auto;
         border-radius: 4px;
         width: 80%;
-        background: #4ad9e4;
+        background: black;
         text-decoration: none;
-        color: #fff;
+        color: white;
         font-size: 1.5rem;
     }
 
     .nav-links-mobile:hover {
-        background: #fff;
-        color: #8665f4;
+        background: white;
+        color: #6568F4;
         transition: 250ms;
     }
 
-    Button {
+    .navButtons {
         display: none;
     }
+}
 
+.gitLogo{
+    width: 63px;
+    height: 17px;
+    /* padding: 10px;
+    margin-bottom: 17px; */
+}
+
+.linkedLogo{
+    width: 98px;
+    height: 31px;
+    /* padding: 20px; */
 }
