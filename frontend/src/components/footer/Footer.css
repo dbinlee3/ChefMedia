@@ -1,4 +1,5 @@
 .footer {
+    background: rgb(8, 184, 149);
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -14,6 +15,8 @@
     background-color: black;
     height: 10px;
     width: 100%;
+    object-fit: none;
+    /* height: 100%; */
   }
 
   .footer-title {

@@ -2,40 +2,42 @@ import React from 'react'
 
 import './Navbar.css'
 import { MenuItems } from "./MenuItems"
+import gordon from '../../assets/gordon.png'
 
 class Navbar extends React.Component {
 
     state = { clicked: false }
 
+    // Sets the state to true/false for icon click change
     handleClick = () => {
         this.setState({ clicked: !this.state.clicked })
     }
 
     render() {
         return(
-            
-            <nav className = "NavbarItems">
-                <h1 className = "navbar-logo"> ChefMedia </h1>
-                <div className = "menu-icon" onClick = {this.handleClick}>
-                    <i className = {this.state.clicked ? 'fas-fa-times': 'fas fa-bars'}> </i>
-                </div>
-                <ul className = {this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
+            <>
+                <nav className = "navbarItems">
+                    <img className="profPic" src = {gordon} alt = ""/>
+                    <a className = "navbarLogo" href = "."> ChefMedia </a>
+                    <div className = "menu-icon" onClick = {this.handleClick}>
+                        <i className = {this.state.clicked ? 'fas fa-times': 'fas fa-bars'}> </i>
+                    </div>
+                    <ul className = {this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
 
-                    {MenuItems.map((item, index) => {
-                        return (
-                            <li key = {index}>
-                                <a className = {item.cName} href = {item.url}>
-                                    {item.title}  
-                                </a>
-                            </li>
-                        )
-                    })}
-
+                        {MenuItems.map((item, index) => {
+                            return (
+                                <li key = {index}>
+                                    <a className = {item.cName} href = {item.url}>
+                                        {item.title}  
+                                    </a>
+                                </li>
+                            )
+                        })}
+   
+                    </ul>
                     
-                </ul>
-                
-            </nav>
-            
+                </nav>
+            </>
         )
     }
 }
