@@ -1,0 +1,110 @@
+
+.postContainer {
+    font-family: 'Abhaya Libre', serif;
+
+    width: 700px;
+    height: auto;
+    background-color: rgb(245, 240, 240);
+    border-radius: 1.5rem;
+    margin-top: 100px;
+    padding: 30px;
+}
+
+/* .postContent {
+    
+} */
+
+.postRow {
+    /* display: inline-block; */
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    
+}
+
+.postThumbnail {
+    display: inline-block;
+    border-radius: 50%;
+    max-height: 45px;
+    max-width: 45px;
+}
+
+.postUsername {
+    display: inline-block;
+}
+
+.postDate {
+    display: inline-block;
+}
+
+.topBar {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.postLeftColumn {
+    text-align: center;
+    
+}
+
+.postRightColumn {
+    display: flex;
+    align-items: center;
+}
+
+.columnSection {
+    margin-top: 35px;
+}
+
+.postColumnGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.postTitle {
+    /* margin-top: 20px; */
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+.columnBar {
+    height: 1px;
+    text-align: center;
+    width: 85%;
+}
+
+.cookInfo {
+    font-size: 20px;
+    text-align: left;
+}
+
+/* .postRightColumn {
+    margin: 0;
+} */
+
+.foodImage {
+    display: block;
+}
+
+.directions {
+    text-align: center;
+}
+
+.directionList {
+    font-size: 20px;
+    list-style: none;
+    text-align: left;
+}
+
+.directionList li {
+    counter-increment: item;
+    margin-bottom: 10px;
+}
+
+.directionList li::before {
+    content: counter(item);
+    font-size: 24px;
+    font-weight: bold;
+}
