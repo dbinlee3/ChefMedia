@@ -1,18 +1,26 @@
+body {
+    margin: 0px;
+}
+
 .postContainer {
     font-family: 'Abhaya Libre', serif;
+
     width: 700px;
     height: auto;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     border-radius: 1.5rem;
     margin-top: 100px;
     padding: 30px;
 }
 
+/* .postContent {
+    
+} */
+
 .postRow {
     display: flex;
     align-items: center;
-    font-size: 20px;
-    font-family: Helvetica;
+    font-size: 21px;
 }
 
 .postThumbnail {
@@ -24,7 +32,6 @@
 
 .postUsername {
     display: inline-block;
-    color: #1775ee;
 }
 
 .postDate {
@@ -34,11 +41,16 @@
 .topBar {
     margin-top: 10px;
     margin-bottom: 0px;
+
+}
+
+.postColumnGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .postLeftColumn {
     text-align: center;
-    
 }
 
 .postRightColumn {
@@ -50,12 +62,8 @@
     margin-top: 35px;
 }
 
-.postColumnGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
 .postTitle {
+    /* margin-top: 20px; */
     font-size: 30px;
     font-weight: bold;
 }
@@ -73,8 +81,11 @@
 
 .foodImage {
     display: block;
-    border-radius: 1rem;
-    border: 3px solid rgb(65, 65, 65, .9);
+}
+
+.foodImage2 {
+    display: block;
+    width: 320px;
 }
 
 .directions {
