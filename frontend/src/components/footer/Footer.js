@@ -12,19 +12,19 @@ function Footer() {
 
             {/*Title Word*/}
             <section className = "footer-title">
-                ChefMedia
+                Pantri
             </section>
 
             {/* Center Side of Footer*/}
             <section className = "center">
 
                 {/* Copyright stuff */}
-                <p>Copyright &copy; 2022 ChefMedia</p>
+                <p>Copyright &copy; 2022 Pantri</p>
                 
                 <strong>
                     {/* Gmail and Team Page Links*/}
-                    <a href = "mailto:chefmedia@gmail.com" target = "_blank" rel="noreferrer">
-                        chefmedia@gmail.com &emsp;
+                    <a href = "mailto:pantri@gmail.com" target = "_blank" rel="noreferrer">
+                        pantri@gmail.com &emsp;
                     </a>
                     
                     {/* divider line */}

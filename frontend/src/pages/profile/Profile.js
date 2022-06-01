@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import './profile.css'
 
 import gordon from '../../assets/gordon.png'
-import PostOne from '../../components/post/PostOne.js'
-import PostTwo from '../../components/post/PostTwo.js'
+import Post from '../../components/post/Post.js'
 
 function Profile() {
 
@@ -64,9 +63,7 @@ function Profile() {
 
                 <section className="profileRight">
                     <div className = "profileRightContent">
-                        <PostOne />
-                        
-                        <PostTwo />
+                        <Post />
 
                     </div> 
 
