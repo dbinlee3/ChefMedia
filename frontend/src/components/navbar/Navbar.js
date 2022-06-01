@@ -17,7 +17,10 @@ class Navbar extends React.Component {
         return(
             <>
                 <nav className = "navbarItems">
-                    <img className="profPic" src = {gordon} alt = ""/>
+                    <a href="/profile">
+                        <img className="profPic" src = {gordon} alt = ""/>
+                    </a>
+
 
                     <a className = "navbarLogo" href = "."> Pantri </a>
 

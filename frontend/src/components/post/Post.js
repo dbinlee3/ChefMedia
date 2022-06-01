@@ -26,8 +26,11 @@ const Post = ({
             <div className="postContainer">
                 {/* < className="postContent"> */}
                     <section className="postRow">
+                        <a href="/profile">
+                            <img src={userPic} alt="" className="postThumbnail"/>
+                        </a>
 
-                        <img src={userPic} alt="" className="postThumbnail"/>
+                        
                         <label className="postUsername">&nbsp;{user}&nbsp;</label>
                         <div className="postDate">posted {datePosted} minutes ago</div>
 
@@ -97,7 +100,7 @@ const Post = ({
 
 
                     <section className="postRow">
-                        <img src={likeIcon} alt="" className="postThumbnail"/>
+                        <img src={likeIcon} alt="" className="likeIcon"/>
                         <p className="postNumLikes">&nbsp; {likes} people liked this</p>
                     </section>
 

@@ -34,6 +34,8 @@
     margin-top: 10px;
 
   }
+
+
   
   .center {
     padding: 15px;
@@ -47,8 +49,11 @@
     object-fit: cover;
     height: 50px;
     width: 50px;
+    transition-duration: 400ms;
+    font-weight: 500;
   }
 
   .githublogo:hover {
-    opacity: 0.6;
+    opacity: 0.5;
+    transition: all 0.2s ease-out;
   }

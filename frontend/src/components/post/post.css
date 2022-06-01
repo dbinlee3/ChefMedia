@@ -23,11 +23,37 @@ body {
     font-size: 21px;
 }
 
-.postThumbnail {
+/* .postThumbnail {
     display: inline-block;
     border-radius: 50%;
     max-height: 45px;
     max-width: 45px;
+} */
+
+.postThumbnail{
+    border-radius: 50%;
+    max-height: 50px;
+    max-width: 50px;
+    transition-property: all;
+    transition-duration: 400ms;
+}
+
+.postThumbnail:hover {
+    opacity: .7;
+    transition: all 0.2s ease-out;
+}
+
+.likeIcon {
+    border-radius: 50%;
+    max-height: 40px;
+    max-width: 40px;
+    transition-property: all;
+    transition-duration: 400ms;
+}
+
+.likeIcon:hover {
+    opacity: .7;
+    transition: all 0.2s ease-out;
 }
 
 .postUsername {

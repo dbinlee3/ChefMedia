@@ -75,6 +75,12 @@ video {
   
 }
 
+.loginButton:hover{
+    background-color: white;
+    color: #42b72a;
+    border: 1px solid #42b72a;
+}
+
 .notUser{
     margin-top: 15px;
     font-family: Trebuchet MS, sans-serif;
