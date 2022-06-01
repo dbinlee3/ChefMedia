@@ -49,7 +49,7 @@ function Signup() {
 
                         <div className="signupLeft">
                             <div className="signupBox">
-                                <h3 className="chefLogo">ChefMedia</h3>
+                                <h3 className="chefLogo">Pantri</h3>
                                 <span className="signupDescription">
                                     Connect with friends and the world of cooking, recipes and more.
                                 </span>

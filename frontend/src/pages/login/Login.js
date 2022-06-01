@@ -10,29 +10,29 @@ function Login() {
     <div className="loginContainer">
 
       <video src={video1} autoPlay loop muted />
-      <h3 className="cheflogo">ChefMedia</h3>
+
+        <div className="loginBox">
+          <div className="loginContent">
+            <h3 className="cheflogo">Pantri</h3>
 
 
-      <div className="usernameContainer">
-        <label className="textFeild">Username:</label>
-        <input type="text" />
-      </div>
+            <input className="textBox" type="text" placeholder="Username" />
 
-      <div className="passwordContainer">
-        <label className="textFeild">Password:</label>
-        <input type="text" />
-      </div>
+            <input className="textBox" type="text" placeholder="Password"/>
 
-      <a className="notUser" href="./signup">Not a user? Register!</a>
-
-      <button className="loginButton" type="button">
-        LOGIN
-      </button>
+            <div>
+              <a className="notUser" href="./signup">Not a user? Register!</a>
+            </div>
 
 
 
-    
+            <button className="loginButton" type="button">
+              Login
+            </button>
+          </div>
 
+
+        </div>
     </div>
 
   

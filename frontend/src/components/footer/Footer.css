@@ -1,13 +1,19 @@
 .footer {
-    background: white;
+    background: black;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     margin-bottom: 15px;
+    color: white;
   }
   
   a {
     text-decoration: none;
+    color: white;
+  }
+
+  strong {
+    padding: 10px;
   }
 
   .footer-separator {
@@ -21,14 +27,16 @@
 
   .footer-title {
     display: flex;
-    font-size: 30px;
+    font-size: 35px;
+    font-weight: 600;
     font-family: American Typewriter, serif;
     justify-content: center;
     margin-top: 10px;
-    text-decoration: underline;
+
   }
   
   .center {
+    padding: 15px;
     font-size: 20px;
     margin-bottom: 10px;
     text-align: center;
@@ -39,4 +47,8 @@
     object-fit: cover;
     height: 50px;
     width: 50px;
+  }
+
+  .githublogo:hover {
+    opacity: 0.6;
   }

@@ -38,9 +38,9 @@ const cookieDirections = [
 
 // Spaghetti Post
 const spaghettiCookInfo = {
-    servings: 5-6,
+    servings: 6,
     prepTime: 10,
-    cookTime: 10-12,
+    cookTime: 12,
     coolTime: 5
 };
 
@@ -65,7 +65,7 @@ const spaghettiDirections = [
 
 // Caesar Salad Post
 const saladCookInfo = {
-    servings: 1-2,
+    servings: 2,
     prepTime: 11,
     cookTime: 5,
     coolTime: 0
