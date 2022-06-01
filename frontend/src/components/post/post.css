@@ -81,6 +81,8 @@ body {
 
 .foodImage {
     display: block;
+    border-radius: 1rem;
+    border: 3px solid rgb(0, 0, 0, .7);
 }
 
 .foodImage2 {
