@@ -42,10 +42,10 @@ const Post = ( { user, userPic, datePosted, title, cookInfo, ingredients, image,
                             <hr className = "columnBar"/>
 
                             <ul className="cookInfo"> 
-                                <li>Servings: {cookInfo.servings}min</li>
-                                <li>Prep Time: {cookInfo.prepTime}min</li>
-                                <li>Cook Time: {cookInfo.cookTime}min</li>
-                                <li>Cool Time: {cookInfo.coolTime}min</li>
+                                <li>Servings: {cookInfo.servings}</li>
+                                <li>Prep Time: {cookInfo.prepTime}&nbsp;min</li>
+                                <li>Cook Time: {cookInfo.cookTime}&nbsp;min</li>
+                                <li>Cool Time: {cookInfo.coolTime}&nbsp;min</li>
                             </ul>
                         </section>
                         

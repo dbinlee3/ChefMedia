@@ -18,8 +18,8 @@ class Navbar extends React.Component {
             <>
                 <nav className = "navbarItems">
                     <img className="profPic" src = {gordon} alt = ""/>
-                    
-                    <a className = "navbarLogo" href = "."> Patri </a>
+
+                    <a className = "navbarLogo" href = "."> Pantri </a>
 
                     <div className = "menu-icon" onClick = {this.handleClick}>
                         <i className = {this.state.clicked ? 'fas fa-times': 'fas fa-bars'}> </i>
