@@ -25,9 +25,6 @@ function App() {
           <Route path='/profile' element={<Profile />} />
         </Routes>
 
-        <br />
-        <br />
-        <br />
         <Footer />
       </Router>
       

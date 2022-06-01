@@ -1,113 +1,111 @@
 import React from 'react'
 import './post.css'
+
 import likeIcon from '../../assets/like.png'
+import chocolatechipcookies from '../../assets/chocolatechipcookies.jpeg'
+import cookiePic1 from '../../assets/chocolatechipcookies.jpeg'
+import gordon from '../../assets/gordon.png'
 
-// to reuse code from "Home.js" file
-// using Props in JSX
-const Post = ( { user, userPic, datePosted, title, cookInfo, ingredients, image, directions, likes } ) => {
 
-  // Making the food names all uppercase letters
-  const upperTitle = title.toUpperCase();
+const Post = ({ 
+    userPic, 
+    user, 
+    datePosted, 
+    title, 
+    cookInfo, 
+    ingredients, 
+    image, 
+    directions,
+    likes 
+    }) => {
 
-  return (
-    <>
+     const upperTitle = title.toUpperCase();
 
-        <div className="postContainer">
+    return (
+        <>
+            <div className="postContainer">
+                {/* < className="postContent"> */}
+                    <section className="postRow">
 
-            {/* Overall Post Content */}
-            <div className="postContent">
+                        <img src={userPic} alt="" className="postThumbnail"/>
+                        <label className="postUsername">&nbsp;{user}&nbsp;</label>
+                        <div className="postDate">posted {datePosted} minutes ago</div>
 
-                {/* Post Heading */}
-                <section className="postRow">
+                    </section>
 
-                    <img src={userPic} alt="" className="postThumbnail" />
-                    <label className="postUsername">&nbsp;{user}&nbsp;</label>
-                    <div className="postDate">posted {datePosted} minutes ago</div>
+                    <hr className="topBar"/>
 
-                </section>
-                
-                {/* Horizontal Bar */}
-                <hr className = "topBar"/>
+                    <section className="postColumnGrid">
+                        <div className="postLeftColumn">
 
-                {/* Left and Right column */}
-                <section className="postColumnGrid">
-                    
-                    {/* Left column */}
-                    <div className="postLeftColumn">
+                            <section className="columnSection">
+                                <label className="postTitle">{upperTitle}</label>
+
+                                <hr className="columnBar"/>
+
+                                <ul className="cookInfo">
+                                    <li className="servings">Servings: {cookInfo.servings}</li>
+                                    <li className="prepTime">Prep Time: {cookInfo.prepTime}min</li>
+                                    <li className="cookTime">Cook Time: {cookInfo.cookTime}min</li>
+                                    <li className="coolTime">Cool Time: {cookInfo.coolTime}min</li>
+                                </ul>
+
+                            </section>
+
+                            <section className="columnSection">
+                                <label className="postTitle">INGREDIENTS</label>
+
+                                <hr className="columnBar"/>
+
+                                <ul className="cookInfo">
+                                    {ingredients.map( element => {
+                                        return (
+                                            <li>{element}</li>
+                                        )
+                                    })}
+                                </ul>
+
+                            </section>
+
+                        </div>
+
+                        <div className="postRightColumn">
+                            <img src={image} alt="" className="foodImage"/>
+                        </div>
+
+                    </section>
+
+
+                    <section className="directions">
+
+                        <label className="postTitle directionHeader">DIRECTIONS</label>
+                        <hr className="columnBar"/>
+
+
                         
-                        {/* Food Name and Cooking Information */}
-                        <section className="columnSection">
-                            <label className="postTitle">{upperTitle}</label>
-                        
-                            <hr className = "columnBar"/>
+                        <ol className="directionList">
+                            {directions.map( element => {
+                                return (
+                                    <li className="directionStep">. {element}</li>
+                                )
+                            })}
+                        </ol>
 
-                            <ul className="cookInfo"> 
-                                <li>Servings: {cookInfo.servings}</li>
-                                <li>Prep Time: {cookInfo.prepTime}&nbsp;min</li>
-                                <li>Cook Time: {cookInfo.cookTime}&nbsp;min</li>
-                                <li>Cool Time: {cookInfo.coolTime}&nbsp;min</li>
-                            </ul>
-                        </section>
-                        
-                        {/* Ingredients Section */}
-                        <section className="columnSection">
 
-                            <label className="postTitle">INGREDIENTS</label>
+                    </section>
 
-                            {/* Horizontal Bar */}
-                            <hr className = "columnBar"/>
 
-                            {/* we are iterating through each element in the const variable given */}
-                            <ul className="cookInfo">
-                                {ingredients.map(element => {
-                                    return (
-                                        <li>{element}</li>
-                                    )
-                                })}
-                            </ul>
 
-                        </section>
+                    <section className="postRow">
+                        <img src={likeIcon} alt="" className="postThumbnail"/>
+                        <p className="postNumLikes">&nbsp; {likes} people liked this</p>
+                    </section>
 
-                    </div>
-                    
-                    {/* Image for right column */}
-                    <div className="postRightColumn">
-                        <img src={image} alt="" className="foodImage" />
-                    </div>
-
-                </section>
-                
-                {/* Cooking Directions */}
-                <section className="directions">
-
-                    <label className="postTitle">DIRECTIONS</label>
-                    
-                    {/* Horizontal Bar */}
-                    <hr className = "columnBar"/>
-
-                    {/* we are iterating through each element in the const variable given */}
-                    <ol className="directionList">
-                        {directions.map(element => {
-                            return (
-                                <li className = "directionStep">. {element}</li>
-                            )
-                        })}
-                    </ol>
-
-                </section>
-                
-                {/* likes and number of likes */}
-                <section className="postRow">
-                    <img src={likeIcon} alt="" className="postThumbnail" />
-                    <p className="postNumLikes">&nbsp; {likes} people liked this</p>
-                </section>
-                
+                {/* </div> */}
             </div>
 
-        </div>
-    
-    </>
-  )
+        </>
+    )
 }
 
 export default Post
