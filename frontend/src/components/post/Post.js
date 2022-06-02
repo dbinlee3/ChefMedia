@@ -24,7 +24,7 @@ const Post = ({
     return (
         <>
             <div className="postContainer">
-                {/* < className="postContent"> */}
+                <div className="postContent">
                     <section className="postRow">
                         <a href="/profile">
                             <img src={userPic} alt="" className="postThumbnail"/>
@@ -104,7 +104,7 @@ const Post = ({
                         <p className="postNumLikes">&nbsp; {likes} people liked this</p>
                     </section>
 
-                {/* </div> */}
+                </div>
             </div>
 
         </>
