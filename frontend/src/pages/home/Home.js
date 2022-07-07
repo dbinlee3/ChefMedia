@@ -2,6 +2,7 @@ import React from 'react'
 import './home.css'
 
 import Post from '../../components/post/Post'
+import CreatePost from '../../components/createPost/CreatePost'
 
 import gordon from '../../assets/gordon.png'
 import spaghetti from '../../assets/spaghetti.jpeg'
@@ -90,6 +91,8 @@ function Home() {
 
             <div className="homeContainer">
                 <div className="homeFlow">
+
+                    <CreatePost/>
                     
                     {/* Wolfgang Puck Post */}
                     <Post
