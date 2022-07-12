@@ -4,6 +4,9 @@ import './home.css'
 import Post from '../../components/post/Post'
 import CreatePost from '../../components/createPost/CreatePost'
 
+import TestPosts from '../../components/testPosts/TestPosts'
+import TestForm from '../../components/testForm/TestForm'
+
 import gordon from '../../assets/gordon.png'
 import spaghetti from '../../assets/spaghetti.jpeg'
 
@@ -12,6 +15,8 @@ import chocolatechipcookies from '../../assets/chocolatechipcookies.jpeg'
 
 import wolfgang from '../../assets/wolfgang.jpeg'
 import caesarsalad from '../../assets/caesarsalad.jpeg'
+
+import { useSelector } from 'react-redux';
 
 // Cookie Post
 const cookieCookInfo = {
@@ -86,13 +91,22 @@ const saladDirections = [
 ]
 
 function Home() {
+
+    const posts = useSelector( (state) => state.posts);
+
+    console.log("useSelector:", posts);
+
+
+
     return (
         <> 
 
             <div className="homeContainer">
                 <div className="homeFlow">
 
-                    <CreatePost/>
+                    {/* <CreatePost/> */}
+                    <TestForm />
+                    <TestPosts />
                     
                     {/* Wolfgang Puck Post */}
                     <Post
