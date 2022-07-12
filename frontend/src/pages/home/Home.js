@@ -4,7 +4,6 @@ import './home.css'
 import Post from '../../components/post/Post'
 import CreatePost from '../../components/createPost/CreatePost'
 
-import TestPosts from '../../components/testPosts/TestPosts'
 import TestForm from '../../components/testForm/TestForm'
 
 import gordon from '../../assets/gordon.png'
