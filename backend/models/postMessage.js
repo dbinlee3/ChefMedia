@@ -1,15 +1,29 @@
 import mongoose from 'mongoose';
 
 const postSchema = mongoose.Schema({
+
+    /* Not included yet:
+    userPic, images
+    */
+   
+    user: String,
     title: String,
-    message: String,
-    creator: String,
-    tags: [String],
+
+    servings: Number,
+    prepTime: {
+        type: Number,
+        default: 0
+    },
+    cookTime: Number,
+
+    ingredients: [String],
+    directions: [String],
+
     likeCount: {
         type: Number,
         default: 0
     },
-    createdAt: {
+    datePosted: {
         type: Date,
         default: new Date()
     }

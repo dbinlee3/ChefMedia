@@ -12,7 +12,9 @@ const Post = ({
     user, 
     datePosted, 
     title, 
-    cookInfo, 
+    servings, 
+    prepTime,
+    cookTime,
     ingredients, 
     image, 
     directions,
@@ -47,10 +49,9 @@ const Post = ({
                                 <hr className="columnBar"/>
 
                                 <ul className="cookInfo">
-                                    <li className="servings">Servings: {cookInfo.servings}</li>
-                                    <li className="prepTime">Prep Time: {cookInfo.prepTime}min</li>
-                                    <li className="cookTime">Cook Time: {cookInfo.cookTime}min</li>
-                                    <li className="coolTime">Cool Time: {cookInfo.coolTime}min</li>
+                                    <li className="servings">Servings: {servings}</li>
+                                    <li className="prepTime">Prep Time: {prepTime}min</li>
+                                    <li className="cookTime">Cook Time: {cookTime}min</li>
                                 </ul>
 
                             </section>

@@ -96,7 +96,25 @@ function Home() {
 
     console.log("useSelector:", posts);
 
+    console.log("Third post:", posts[2]);
 
+    const renderedPosts = [];
+
+    for (let i = 0; i < posts.length; i++){
+
+        renderedPosts.push(
+            <Post
+                user={posts[i].user}
+                userPic={wolfgang}
+                datePosted = {posts[i].datePosted}
+                title = {posts[i].title}
+                ingredients = {posts[i].ingredients}
+                directions = {posts[i].directions}
+                image = {caesarsalad}
+                likes = {posts[i].likeCount}
+            />
+        )
+    }
 
     return (
         <> 
@@ -109,12 +127,17 @@ function Home() {
                     <TestPosts />
                     
                     {/* Wolfgang Puck Post */}
+
+                    {renderedPosts}
+
                     <Post
                         user = "Wolfgang Puck"
                         userPic = {wolfgang}
                         datePosted = "2"
                         title = "caesar salad" 
-                        cookInfo={saladCookInfo}
+                        servings="4"
+                        prepTime="30"
+                        cookTime="0"
                         ingredients = {saladIngredients}
                         directions = {saladDirections}
                         image = {caesarsalad}
@@ -127,7 +150,9 @@ function Home() {
                         userPic = {guyfieri}
                         datePosted = "7"
                         title = "cookies" 
-                        cookInfo={cookieCookInfo}
+                        servings="4"
+                        prepTime="30"
+                        cookTime="0"
                         ingredients = {cookieIngredients}
                         directions = {cookieDirections}
                         image = {chocolatechipcookies}
@@ -140,7 +165,9 @@ function Home() {
                         userPic = {gordon}
                         datePosted = "21"
                         title = "spaghetti" 
-                        cookInfo={spaghettiCookInfo}
+                        servings="4"
+                        prepTime="30"
+                        cookTime="0"
                         ingredients = {spaghettiIngredients}
                         directions = {spaghettiDirections}
                         image = {spaghetti}
