@@ -96,25 +96,26 @@ function Home() {
 
     console.log("useSelector:", posts);
 
-    console.log("Third post:", posts[2]);
-
     const renderedPosts = [];
 
     for (let i = 0; i < posts.length; i++){
-
         renderedPosts.push(
             <Post
-                user={posts[i].user}
-                userPic={wolfgang}
-                datePosted = {posts[i].datePosted}
-                title = {posts[i].title}
-                ingredients = {posts[i].ingredients}
-                directions = {posts[i].directions}
-                image = {caesarsalad}
-                likes = {posts[i].likeCount}
-            />
+            user = {posts[i].user}
+            userPic = {wolfgang}
+            datePosted = {posts[i].datePosted}
+            title = {posts[i].title}
+            servings={posts[i].servings}
+            prepTime={posts[i].prepTime}
+            cookTime={posts[i].cookTime}
+            ingredients = {posts[i].ingredients}
+            directions = {posts[i].directions}
+            image = {caesarsalad}
+            likes = {posts[i].likeCount}
+        />
         )
     }
+
 
     return (
         <> 
@@ -124,12 +125,10 @@ function Home() {
 
                     {/* <CreatePost/> */}
                     <TestForm />
-                    <TestPosts />
                     
-                    {/* Wolfgang Puck Post */}
-
                     {renderedPosts}
 
+                    {/* Wolfgang Puck Post */}
                     <Post
                         user = "Wolfgang Puck"
                         userPic = {wolfgang}

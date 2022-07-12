@@ -8,7 +8,6 @@ import postRoutes from './routes/posts.js';
 //Every express file needs this statement to run express
 const app = express();
 
-
 app.use(express.json()); //Handles POST requests
 // app.use(bodyParser.json({ limit: "30mb", extended: true }));
 // app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
