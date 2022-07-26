@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './home.css'
 
 import Post from '../../components/post/Post'
@@ -89,6 +89,8 @@ const saladDirections = [
     "Grate the cheese into the bowl for a finishing touch"
 ]
 
+
+
 function Home() {
 
     const posts = useSelector( (state) => state.posts);
@@ -115,15 +117,21 @@ function Home() {
         )
     }
 
-
+    const [state, setState] = useState(false);
+    let createFlag = false;
+    
     return (
         <> 
+
+        
 
             <div className="homeContainer">
                 <div className="homeFlow">
 
-                    {/* <CreatePost/> */}
-                    <TestForm />
+
+                    <TestForm/>
+
+
                     
                     {renderedPosts}
 
