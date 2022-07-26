@@ -119,6 +119,13 @@ function Home() {
 
     const [state, setState] = useState(false);
     let createFlag = false;
+
+    function togglePost() {
+        createFlag = !createFlag;
+        console.log("Toggling createFlag -> ", createFlag);
+
+        setState(createFlag);
+    }
     
     return (
         <> 
@@ -126,12 +133,21 @@ function Home() {
         
 
             <div className="homeContainer">
+
                 <div className="homeFlow">
 
+                    <button onClick={togglePost}>Post</button>
 
-                    <TestForm/>
+                    <div 
+                        className="formContainer"
+                        style={{ display: state ? 'flex' : 'none' }}
+                        onClick={() => setState(false)}
+                    >
+                        <TestForm onClickProp={() => setState(false)}/>
+                    </div>
 
-
+                    
+                    
                     
                     {renderedPosts}
 
