@@ -9,13 +9,13 @@ This is a full stack application utilizing a staff of undergraduate software dev
 Current ETA in completion is by September 2022 depending on amount of time commitment each member can contribute.
 
 ## Tech Stack:
-UX/UI - Figma
-Frontend - React
+UX/UI - Figma <br />
+Frontend - React  <br />
 Backend - Express, MongoDB
 
 ## Developers:
-Ben Lee (He/Him) - Project Lead, Full Stack
-Kenneth Song - Frontend
-Shruti Rao - Frontend
-Kevin Su - Backend
+Ben Lee (He/Him) - Project Lead, Full Stack <br />
+Kenneth Song - Frontend <br />
+Shruti Rao - Frontend <br />
+Kevin Su - Backend <br />
 Sunny - UX
