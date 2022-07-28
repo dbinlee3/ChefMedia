@@ -5,6 +5,8 @@ import video1 from '../../assets/video3.mp4'
 import './login.css'
 
 function Login() {
+
+
   return (
    <>
     <div className="loginContainer">
@@ -29,9 +31,8 @@ function Login() {
             <button className="loginButton" type="button">
               Login
             </button>
+
           </div>
-
-
         </div>
     </div>
 
