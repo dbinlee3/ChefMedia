@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './home.css'
 
 import Post from '../../components/post/Post'
-import CreatePost from '../../components/createPost/CreatePost'
 
 import TestForm from '../../components/testForm/TestForm'
 
