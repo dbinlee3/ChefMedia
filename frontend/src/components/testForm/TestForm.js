@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { createPost } from '../../actions/posts';
 
-import './TestForm.css';
+import './testForm.css';
 
 //const TestForm = ( {createFlag2} ) => { 
 

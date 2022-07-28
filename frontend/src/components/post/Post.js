@@ -1,5 +1,5 @@
 import React from 'react'
-import './Post.css'
+import './post.css'
 
 import likeIcon from '../../assets/like.png'
 import chocolatechipcookies from '../../assets/chocolatechipcookies.jpeg'
