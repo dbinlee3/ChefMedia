@@ -22,7 +22,7 @@ function TestForm( {onClickProp} ) {
     })
 
 
-    const dispatch = useDispatch();
+    const dispatch = useDispatch(); //allows us to use useDispatch() from redux
 
     const handleSubmit = (e) => {
         e.preventDefault(); //prevents refresh from browser

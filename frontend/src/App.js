@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getPosts } from './actions/posts';
 
-
 import Navbar from "./components/navbar/Navbar.js";
 import Footer from "./components/footer/Footer.js"
 
