@@ -141,7 +141,7 @@ function Home() {
                     <div 
                         className="formContainer"
                         style={{ display: state ? 'flex' : 'none' }}
-                        onClick={() => setState(false)}
+                        // onClick={() => setState(false)}
                     >
                         <TestForm onClickProp={() => setState(false)}/>
                     </div>
