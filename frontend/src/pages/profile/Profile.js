@@ -4,6 +4,8 @@ import Post from '../../components/post/Post.js'
 
 import gordon from '../../assets/gordon.png'
 import spaghetti from '../../assets/spaghetti.jpeg'
+import closeIcon from '../../assets/close-icon.svg';
+import gearIcon from '../../assets/gear-icon.svg';
 
 // Spaghetti Post
 const spaghettiCookInfo = {
@@ -32,9 +34,28 @@ const spaghettiDirections = [
     "Add in the pasta water to get the right sauce consistency"
 ]
 
+const numPosts = 4;
+const numFollowers = 20;
+const numFollowing = 13;
+
+function handleClick(){
+    alert("XD");
+}
+
+function handleFollowers(){
+
+}
+
+
+
+
 function Profile() {
 
     const [ photoHovered, setPhotoHovered ] = useState(false);
+
+    const [showFollowers, setShowFollowers] = useState(false);
+    const [showFollowing, setShowFollowing] = useState(false);
+    const [showSettings, setShowSettings] = useState(false);
 
     return (
         <div className = "profileContainer">
@@ -45,6 +66,15 @@ function Profile() {
                     <div className = "profileLeftContent">
 
                         <div className = "profileBox">
+
+                            <img 
+                                src={gearIcon} 
+                                alt=""
+                                className="gearIcon"
+                                onClick={() => setShowSettings(true)}
+                            />
+
+
                             <div className = "bioContent">
                                 <h2 className = "username">Gordon Ramsay</h2>
                                 <div className="profileButton">
@@ -65,6 +95,25 @@ function Profile() {
                                     >
                                         Change Profile Photo
                                     </p>
+                                </div>
+
+                                <div className="profileStats">
+
+                                    <li>
+                                        <div className="statSection">
+                                            <h3>{numPosts}</h3> posts
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button className="statSection" onClick={() => setShowFollowers(true)}>
+                                            <h3>{numFollowers}</h3> followers
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button className="statSection" onClick={() => setShowFollowing(true)}>
+                                            <h3>{numFollowing}</h3> following
+                                        </button>
+                                    </li>
 
                                 </div>
 
@@ -102,6 +151,118 @@ function Profile() {
 
 
             </div> {/* profileContent */}
+
+            <div 
+                className="opacBackground"
+                style={{
+                    display: showFollowers ? 'flex' : 'none'
+            }}>
+
+                <div className="followContainer">
+
+                    <div 
+                        className="followersContent"
+                        style={{
+                            display: showFollowers ? 'block' : 'none'
+                        
+                    }}>
+                        <div className="followersHeader">
+                            <h2>Followers</h2>
+                            <hr/>
+                            <img 
+                                src={closeIcon} 
+                                alt=""
+                                className="closeIcon"
+                                onClick={() => setShowFollowers(false)}
+                            />
+                        </div>
+                        <ul id="followersList" className="followersList">
+
+                            <li>
+                                <img src={gordon} alt=""/>
+                                <h3>Gordon Ramsay</h3>
+                                <button>Unfollow</button>
+                            </li>
+
+                            <li>
+                                <img src={gordon} alt=""/>
+                                <h3>Gordon Ramsay</h3>
+                                <button>Unfollow</button>
+                            </li>
+
+                        </ul>
+                    </div> {/* followersContent */}
+                </div> {/* followContainer */}
+            </div> {/* opacBackground */}
+
+
+            <div 
+                className="opacBackground"
+                style={{
+                    display: showFollowing ? 'flex' : 'none'
+            }}>
+                <div className="followContainer">
+                    <div 
+                        className="followingContent"
+                        style={{
+                            display: showFollowing ? 'block' : 'none'
+                        
+                    }}>
+                        <div className="followersHeader">
+                            <h2>Following</h2>
+                            <hr/>
+                            <img 
+                                src={closeIcon} 
+                                alt=""
+                                className="closeIcon"
+                                onClick={() => setShowFollowing(false)}
+                            />
+                        </div>
+                        <ul id="followersList" className="followersList">
+
+                            <li>
+                                <img src={gordon} alt=""/>
+                                <h3>Gordon Ramsay</h3>
+                                <button>Unfollow</button>
+                            </li>
+
+                            <li>
+                                <img src={gordon} alt=""/>
+                                <h3>Gordon Ramsay</h3>
+                                <button>Unfollow</button>
+                            </li>
+
+                        </ul>
+                    </div> {/* followingContent */}
+                </div> {/* followContainer */}
+            </div> {/* opacBackground */}
+
+            <div 
+                className="opacBackground"
+                style={{
+                    display: showSettings ? 'flex' : 'none'
+            }}>
+                <div className="followContainer">
+                    <div 
+                        className="settingsContent"
+                        style={{
+                            display: showSettings ? 'block' : 'none'
+                        
+                    }}>
+                        <div className="followersHeader">
+                            <h2>Settings</h2>
+                            <hr/>
+                            <img 
+                                src={closeIcon} 
+                                alt=""
+                                className="closeIcon"
+                                onClick={() => setShowSettings(false)}
+                            />
+                        </div>
+
+                    </div> {/* followingContent */}
+                </div> {/* followContainer */}
+            </div> {/* opacBackground */}
 
         </div> 
     )
