@@ -39,9 +39,18 @@ body {
     position: relative;
     text-align: center;
     height: 650px;
-    width: 400px;
+    width: 440px;
     background-color: white;
     border-radius: 30px;
+}
+
+.gearIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }
 
 .bioContent {
@@ -120,6 +129,106 @@ body {
     justify-content: center;
     
 }
+
+.profileStats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    padding: 16px 0;
+}
+
+.statSection > *{
+    display: inline;
+}
+
+.statSection {
+    font-size: 18px;
+}
+
+.profileStats button {
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+
+    padding: 1px 6px 0 6px;
+}
+
+.opacBackground {
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+    display: none;
+    position: fixed;
+    background-color: rgb(0,0,0,0.3);
+    justify-content: center;
+    align-items: center;
+}
+
+.followContainer {
+    width: 460px;
+    height: 500px;
+    background-color: #ffffff;
+    border-radius: 1.4rem;
+}
+
+.followersHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+    border-bottom: 2px solid #bfbfbf;
+    position: relative;
+}
+
+
+.closeIcon {
+    position: absolute;
+    margin-top: 0;
+    margin-bottom: 0;
+    right: 16px;
+    width: 22px;
+    height: 22px;
+    color: white;
+    cursor: pointer;
+} 
+
+.followersList {
+    height: auto;
+    padding: 12px;
+    list-style: none;
+}
+
+.followersList li {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr;
+    align-items: center;
+    padding: 8px;
+}
+
+
+.followersList li > * {
+    display: inline-block;
+}
+
+.followersList li > button {
+    background-color: #ffffff;
+    border: 1px solid #bfbfbf;
+    border-radius: 4px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.followersList img {
+    width: 40px;
+    height: 40px;
+    border: solid 2px rgb(0,0,0,0.8);
+    border-radius: 50%;
+}
+
+
 
 @media screen and (max-width: 960px) {
 
